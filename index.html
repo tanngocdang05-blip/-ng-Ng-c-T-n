@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặng Ngọc Tân - Personal Website</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navyPurple: '#1e1b4b', // Xanh than ánh tím đậm (Indigo 950)
+                        primaryViolet: '#4f46e5', // Tím chàm chủ đạo (Indigo 600)
+                        accentPurple: '#7c3aed', // Tím nhấn (Violet 600)
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased selection:bg-indigo-600 selection:text-white">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#1e1b4b]/95 backdrop-blur-md border-b border-indigo-800/60 text-white shadow-md">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="#home" class="text-xl font-black tracking-wider bg-gradient-to-r from-indigo-300 via-purple-300 to-white bg-clip-text text-transparent">
+                NGOC TAN.
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-indigo-100">
+                <a href="#home" class="hover:text-purple-300 transition-colors">Trang chủ</a>
+                <a href="#about" class="hover:text-purple-300 transition-colors">Giới thiệu</a>
+                <a href="#hobbies" class="hover:text-purple-300 transition-colors">Sở thích</a>
+                <a href="#subjects" class="hover:text-purple-300 transition-colors">Môn học</a>
+                <a href="#gallery" class="hover:text-purple-300 transition-colors">Thư viện ảnh</a>
+                <a href="#video" class="hover:text-purple-300 transition-colors">Video</a>
+                <a href="#links" class="hover:text-purple-300 transition-colors">Liên kết</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-indigo-200 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#1e1b4b] border-b border-indigo-800 px-4 pt-2 pb-4 space-y-2 text-indigo-100">
+            <a href="#home" class="block py-2 hover:text-purple-300">Trang chủ</a>
+            <a href="#about" class="block py-2 hover:text-purple-300">Giới thiệu</a>
+            <a href="#hobbies" class="block py-2 hover:text-purple-300">Sở thích</a>
+            <a href="#subjects" class="block py-2 hover:text-purple-300">Môn học</a>
+            <a href="#gallery" class="block py-2 hover:text-purple-300">Thư viện ảnh</a>
+            <a href="#video" class="block py-2 hover:text-purple-300">Video</a>
+            <a href="#links" class="block py-2 hover:text-purple-300">Liên kết</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 bg-gradient-to-br from-[#17153b] via-[#2e236c] to-[#4338ca] text-center px-4 text-white relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-indigo-400/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-3xl space-y-6 relative z-10">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-white/10 text-indigo-200 text-xs font-semibold tracking-widest uppercase border border-indigo-300/30 backdrop-blur-sm">
+                WELCOME TO MY WEBSITE
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white drop-shadow-sm">
+                ĐẶNG NGỌC TÂN
+            </h1>
+            <p class="text-lg sm:text-xl text-indigo-100/90 max-w-xl mx-auto leading-relaxed">
+                Chào mừng bạn đến với không gian cá nhân của mình. <br>
+                <span class="text-purple-300 font-semibold">Học hỏi · Trải nghiệm · Khám phá</span>
+            </p>
+            <div class="pt-4 flex justify-center gap-4">
+                <a href="#about" class="px-7 py-3.5 rounded-xl bg-white text-[#1e1b4b] font-bold hover:bg-indigo-50 transition shadow-lg shadow-indigo-950/40">
+                    Khám phá ngay
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 px-4 max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-[#1e1b4b] mb-2">Giới thiệu bản thân</h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto mb-12 rounded"></div>
+
+        <div class="bg-white border border-indigo-100 rounded-2xl p-8 shadow-xl shadow-indigo-950/5 flex flex-col md:flex-row gap-8 items-center">
+            <div class="w-full md:w-1/3 flex justify-center">
+                <div class="w-48 h-48 rounded-full bg-indigo-50 overflow-hidden border-4 border-indigo-500/30 shadow-lg">
+                    <!-- Ảnh Avatar -->
+                    <img src="9e84db45-1491-46bc-9a5c-47737950e027.jpg" alt="Đặng Ngọc Tân" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="w-full md:w-2/3 space-y-4 text-slate-600">
+                <h3 class="text-2xl font-bold text-[#1e1b4b]">Đặng Ngọc Tân</h3>
+                <p><strong class="text-[#1e1b4b]">Sở thích:</strong> Bóng rổ, Chạy bộ</p>
+                <p><strong class="text-[#1e1b4b]">Môn học yêu thích:</strong> Toán, Vật lý, Tiếng Anh</p>
+                <blockquote class="p-4 bg-indigo-50/80 border-l-4 border-indigo-600 text-[#1e1b4b] italic rounded-r-lg font-medium">
+                    "Shooter gonna shoot" — Tinh thần tự tin, tập trung tối đa và sẵn sàng nắm bắt mọi cơ hội để bứt phá.
+                </blockquote>
+                <p class="text-slate-600 leading-relaxed">
+                    Mình là người yêu thích khám phá những điều mới, luôn muốn học hỏi, trải nghiệm và phát triển bản thân qua từng ngày trên hành trình chinh phục các mục tiêu phía trước.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="py-20 px-4 bg-slate-50/70 border-y border-indigo-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-[#1e1b4b] mb-2">Sở thích của mình</h2>
+            <p class="text-slate-500 text-center mb-4">Những hoạt động tạo nên năng lượng và màu sắc riêng</p>
+            <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto mb-12 rounded"></div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Bóng rổ -->
+                <div class="bg-white border border-indigo-100 rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:border-indigo-300 transition duration-300 group">
+                    <div class="h-60 overflow-hidden">
+                        <img src="02b2bba3-71a1-443a-8cc2-217a6a009446 (1).jpg" alt="Bóng rổ" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-xl font-bold text-[#1e1b4b] flex items-center gap-2">
+                            <i class="fa-solid fa-basketball text-indigo-600"></i> Bóng rổ
+                        </h3>
+                        <p class="text-slate-600">
+                            Môn thể thao rèn luyện sức bền, sự quyết đoán, tư duy chiến thuật nhạy bén và tinh thần đồng đội gắn kết trên sân đấu.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Chạy bộ -->
+                <div class="bg-white border border-indigo-100 rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:border-indigo-300 transition duration-300 group">
+                    <div class="h-60 overflow-hidden">
+                        <!-- Ảnh chạy -->
+                        <img src="8cf20798-e99e-436d-9345-0a9688a35463.jpg" alt="Chạy bộ Strava" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 space-y-2">
+                        <h3 class="text-xl font-bold text-[#1e1b4b] flex items-center gap-2">
+                            <i class="fa-solid fa-person-running text-purple-600"></i> Chạy bộ (10.01 km)
+                        </h3>
+                        <p class="text-slate-600">
+                            Duy trì sự kiên trì, ý chí chinh phục cung đường dài và tận hưởng khoảnh khắc năng lượng tích cực lúc hoàng hôn.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section id="subjects" class="py-20 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-[#1e1b4b] mb-2">Môn học yêu thích</h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto mb-12 rounded"></div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white border border-indigo-100 p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-indigo-300 transition">
+                <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 text-xl font-bold mb-4">
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+                <h3 class="text-xl font-bold text-[#1e1b4b] mb-2">Toán học</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Phát triển tư duy logic, rèn luyện sự nhạy bén và khả năng giải quyết vấn đề phức tạp.</p>
+            </div>
+
+            <div class="bg-white border border-indigo-100 p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-indigo-300 transition">
+                <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 text-xl font-bold mb-4">
+                    <i class="fa-solid fa-atom"></i>
+                </div>
+                <h3 class="text-xl font-bold text-[#1e1b4b] mb-2">Vật lý</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Khám phá các quy luật vận hành của tự nhiên và ứng dụng thực tiễn vào đời sống.</p>
+            </div>
+
+            <div class="bg-white border border-indigo-100 p-6 rounded-2xl shadow-sm hover:shadow-md hover:border-indigo-300 transition">
+                <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600 text-xl font-bold mb-4">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <h3 class="text-xl font-bold text-[#1e1b4b] mb-2">Tiếng Anh</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Công cụ sắc bén để mở rộng tri thức nhân loại và kết nối toàn cầu.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Thư viện ảnh) -->
+    <section id="gallery" class="py-20 px-4 bg-[#1e1b4b] text-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-2">Thư viện ảnh</h2>
+            <p class="text-indigo-200 text-center mb-4">Khoảnh khắc chạy bộ & các góc máy bóng rổ</p>
+            <div class="w-16 h-1 bg-gradient-to-r from-indigo-400 to-purple-400 mx-auto mb-12 rounded"></div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Ảnh 1: Chạy -->
+                <div class="overflow-hidden rounded-xl border border-indigo-700/60 shadow-lg group h-72 relative">
+                    <img src="8cf20798-e99e-436d-9345-0a9688a35463.jpg" alt="Chạy bộ" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#1e1b4b] via-[#1e1b4b]/60 to-transparent p-3 text-xs font-medium text-indigo-100">
+                        Chạy bộ 10.01 km
+                    </div>
+                </div>
+
+                <!-- Ảnh 2: Bóng rổ 1 -->
+                <div class="overflow-hidden rounded-xl border border-indigo-700/60 shadow-lg group h-72 relative">
+                    <img src="02b2bba3-71a1-443a-8cc2-217a6a009446 (1).jpg" alt="Bóng rổ 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#1e1b4b] via-[#1e1b4b]/60 to-transparent p-3 text-xs font-medium text-indigo-100">
+                        Bóng rổ #1
+                    </div>
+                </div>
+
+                <!-- Ảnh 3: Bóng rổ 2 -->
+                <div class="overflow-hidden rounded-xl border border-indigo-700/60 shadow-lg group h-72 relative">
+                    <img src="6915d3d3-252a-43d3-987c-68e8e2fec334.jpg" alt="Bóng rổ 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#1e1b4b] via-[#1e1b4b]/60 to-transparent p-3 text-xs font-medium text-indigo-100">
+                        Bóng rổ #2
+                    </div>
+                </div>
+
+                <!-- Ảnh 4: Bóng rổ 3 -->
+                <div class="overflow-hidden rounded-xl border border-indigo-700/60 shadow-lg group h-72 relative">
+                    <img src="8d876cd2-1614-47a2-aac7-8c8b0ea03bf4.jpg" alt="Bóng rổ 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#1e1b4b] via-[#1e1b4b]/60 to-transparent p-3 text-xs font-medium text-indigo-100">
+                        Bóng rổ #3
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section (Video bóng rổ) -->
+    <section id="video" class="py-20 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-[#1e1b4b] mb-2">Video bóng rổ</h2>
+        <p class="text-slate-500 text-center mb-4">Những thước phim ghi lại đam mê trên sân</p>
+        <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto mb-12 rounded"></div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Video Bóng rổ 1 -->
+            <div class="bg-white border border-indigo-100 rounded-2xl overflow-hidden shadow-lg">
+                <video controls playsinline poster="02b2bba3-71a1-443a-8cc2-217a6a009446 (1).jpg" class="w-full h-auto aspect-video object-cover bg-[#1e1b4b]">
+                    <source src="6bdf609c-3932-4180-9c26-44569ce88671.mp4" type="video/mp4">
+                    Trình duyệt không hỗ trợ video.
+                </video>
+                <div class="p-4 text-center font-semibold text-[#1e1b4b]">Highlight Bóng Rổ 1</div>
+            </div>
+
+            <!-- Video Bóng rổ 2 -->
+            <div class="bg-white border border-indigo-100 rounded-2xl overflow-hidden shadow-lg">
+                <video controls playsinline poster="6915d3d3-252a-43d3-987c-68e8e2fec334.jpg" class="w-full h-auto aspect-video object-cover bg-[#1e1b4b]">
+                    <source src="d34aaf72-2ada-4505-aa4e-d34881ec9db9.mp4" type="video/mp4">
+                    Trình duyệt không hỗ trợ video.
+                </video>
+                <div class="p-4 text-center font-semibold text-[#1e1b4b]">Highlight Bóng Rổ 2</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Favorite Links Section -->
+    <section id="links" class="py-20 px-4 bg-slate-50/70 border-t border-indigo-50 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-[#1e1b4b] mb-2">Liên kết yêu thích</h2>
+            <p class="text-slate-500 mb-4">Các trang web và nguồn cảm hứng</p>
+            <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto mb-12 rounded"></div>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://bwfbadminton.com/" target="_blank" rel="noopener" class="px-6 py-3 bg-white text-[#1e1b4b] hover:bg-[#1e1b4b] hover:text-white border border-indigo-200 rounded-xl shadow-sm transition font-medium flex items-center gap-2">
+                    <i class="fa-solid fa-link text-indigo-600"></i> BWF Official
+                </a>
+                <a href="https://www.facebook.com/bwfbadminton" target="_blank" rel="noopener" class="px-6 py-3 bg-white text-[#1e1b4b] hover:bg-[#1e1b4b] hover:text-white border border-indigo-200 rounded-xl shadow-sm transition font-medium flex items-center gap-2">
+                    <i class="fa-brands fa-facebook text-indigo-600"></i> Facebook BWF
+                </a>
+                <a href="https://vn.canon/" target="_blank" rel="noopener" class="px-6 py-3 bg-white text-[#1e1b4b] hover:bg-[#1e1b4b] hover:text-white border border-indigo-200 rounded-xl shadow-sm transition font-medium flex items-center gap-2">
+                    <i class="fa-solid fa-camera text-indigo-600"></i> Canon Việt Nam
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#17153b] text-indigo-200 border-t border-indigo-900 py-8 text-center text-sm">
+        <p>© 2026 <span class="text-white font-semibold">Đặng Ngọc Tân</span></p>
+        <p class="mt-1 text-indigo-300/70 tracking-wider text-xs">PERSONAL WEBSITE</p>
+    </footer>
+
+    <!-- Simple Mobile Menu Script -->
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
